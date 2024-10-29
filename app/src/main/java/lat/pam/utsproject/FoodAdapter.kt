@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class FoodAdapter(
     private val foodList: List<Food>,
-    private val onItemClick: (Food) -> Unit // Tambahkan parameter onItemClick
+    private val onItemClick: (Food) -> Unit // menambahkan parameter onItemClick
 ) : RecyclerView.Adapter<FoodAdapter.FoodViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodViewHolder {
@@ -25,7 +25,7 @@ class FoodAdapter(
 
         // Panggil onItemClick ketika item diklik
         holder.itemView.setOnClickListener {
-            onItemClick(food) // Kirimkan objek Food ke onItemClick
+            onItemClick(food) // mengirimkan objek Food ke onItemClick
         }
     }
 

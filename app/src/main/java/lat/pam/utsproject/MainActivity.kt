@@ -52,11 +52,10 @@ class MainActivity : AppCompatActivity() {
         val savedUsername = sharedPreferences.getString("username", null)
         val savedPassword = sharedPreferences.getString("password", null)
 
-        // Logika login yang diperbaiki
         if (username == savedUsername && password == savedPassword) {
             val intent = Intent(this, ListFoodActivity::class.java)
             startActivity(intent)
-            finish() // Menutup MainActivity
+            finish()
         } else {
             Toast.makeText(this, "Login Failed. Invalid username or password.", Toast.LENGTH_SHORT).show()
         }

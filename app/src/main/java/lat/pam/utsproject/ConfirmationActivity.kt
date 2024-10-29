@@ -31,19 +31,19 @@ class ConfirmationActivity : AppCompatActivity() {
         val orderingName = intent.getStringExtra("ORDERING_NAME") ?: "N/A"
         val additionalNotes = intent.getStringExtra("ADDITIONAL_NOTES") ?: "N/A"
 
-        // Atur tampilan TextViews dengan data pesanan
+        // tampilan TextViews data pesanan
         tvFoodName.text = "Food Name: $foodName"
         tvNumberOfServings.text = "Number of Servings: $servings"
         tvOrderingName.text = "Ordering Name: $orderingName"
         tvAdditionalNotes.text = "Additional Notes: $additionalNotes"
 
-        // Pengaturan tombol kembali ke menu
+        // tombol back to menu kembali ke listfoodactivity
         backToMenu.setOnClickListener {
             val intent = Intent(this, ListFoodActivity::class.java).apply {
                 addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
             }
             startActivity(intent)
-            finish() // Menutup ConfirmationActivity setelah kembali ke ListFoodActivity
+            finish()
         }
     }
 }

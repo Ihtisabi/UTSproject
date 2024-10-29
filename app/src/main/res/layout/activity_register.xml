@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Username Field -->
+    <!-- Username -->
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Password Field -->
+    <!-- Password -->
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
@@ -24,7 +24,7 @@
         android:inputType="textPassword"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Confirm Password Field -->
+    <!-- Confirm Password-->
     <EditText
         android:id="@+id/etConfirmPassword"
         android:layout_width="match_parent"

@@ -20,14 +20,14 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="20dp"/>
 
-    <!-- Confirmation Nama Makanan -->
+    <!-- Nama Makanan -->
     <TextView
         android:id="@+id/tvFoodName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:layout_marginBottom="8dp"/>
-    <!-- Confirmation Jumlah Porsi -->
+    <!-- Jumlah Porsi -->
     <TextView
         android:id="@+id/tvNumberOfServings"
         android:layout_width="wrap_content"
@@ -36,7 +36,7 @@
         android:textSize="18sp"
         android:layout_marginBottom="8dp"/>
 
-    <!-- Confirmation Nama pengorder -->
+    <!-- Nama pengorder -->
     <TextView
         android:id="@+id/tvOrderingName"
         android:layout_width="wrap_content"
@@ -54,7 +54,7 @@
         android:textSize="18sp"
         android:layout_marginBottom="30dp"/>
 
-    <!-- Input Catatan Tambahan -->
+    <!-- Catatan thank you -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

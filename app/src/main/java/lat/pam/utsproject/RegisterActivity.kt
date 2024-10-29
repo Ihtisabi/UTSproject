@@ -40,13 +40,14 @@ class RegisterActivity : AppCompatActivity() {
             val editor = sharedPreferences.edit()
             editor.putBoolean("isRegistered", true)
             editor.putString("username", username)
-            editor.putString("password", password) // Simpan password (pastikan ini aman)
+            editor.putString("password", password) // Simpan password
             editor.apply()
 
+            //register success/failed
             Toast.makeText(this, "Registration Successful!", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            finish() // Menutup RegisterActivity
+            finish()
         } else {
             Toast.makeText(this, "Registration Failed. Please check your input.", Toast.LENGTH_SHORT).show()
         }

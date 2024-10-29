@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class OrderActivity : AppCompatActivity() {
-    private lateinit var tvFoodName: TextView // Ganti spinnerFoodName menjadi TextView untuk menampilkan nama makanan
+    private lateinit var tvFoodName: TextView
     private lateinit var etServings: EditText
     private lateinit var etName: EditText
     private lateinit var etNotes: EditText
@@ -16,10 +16,10 @@ class OrderActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_order) // Pastikan layout sudah sesuai
+        setContentView(R.layout.activity_order)
 
-        // Initialize views
-        tvFoodName = findViewById(R.id.tvFoodName) // TextView untuk menampilkan nama makanan
+        // Inisialisasi view
+        tvFoodName = findViewById(R.id.tvFoodName)
         etServings = findViewById(R.id.etServings)
         etName = findViewById(R.id.etName)
         etNotes = findViewById(R.id.etNotes)
@@ -29,19 +29,18 @@ class OrderActivity : AppCompatActivity() {
         val foodName = intent.getStringExtra("foodName") ?: "Unknown Food"
         tvFoodName.text = foodName
 
-        // Set the order button click listener
         btnOrder.setOnClickListener {
             placeOrder(foodName) // Pass foodName to placeOrder
         }
     }
 
     private fun placeOrder(foodName: String) {
-        // Gather input data
+        //input data order
         val servings = etServings.text.toString()
         val orderingName = etName.text.toString()
         val additionalNotes = etNotes.text.toString()
 
-        // Create an intent to navigate to ConfirmationActivity
+        // membuat intent untuk diteruskan ke ConfirmationActivity
         val intent = Intent(this, ConfirmationActivity::class.java).apply {
             putExtra("FOOD_NAME", foodName)
             putExtra("SERVINGS", servings)

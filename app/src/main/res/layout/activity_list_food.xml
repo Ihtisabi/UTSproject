@@ -26,6 +26,6 @@
         android:layout_height="match_parent"
         android:layout_below="@id/tvTitle"
         android:scrollbars="vertical"
-        android:layout_marginTop="16dp"/> <!-- Pastikan ada ruang di bawah untuk FAB -->
+        android:layout_marginTop="16dp"/>
 
 </RelativeLayout>
